@@ -1,0 +1,281 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d4d2d2;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #444;
+  height: auto;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #383838;
+  color: #fff;
+}
+
+.fa-bars {
+  color: #918e8e;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+/*  color: #81dbb5;*/
+  color: #AA884C;
+}
+
+header h3:hover {
+  cursor: pointer;
+  color: #686F76;
+}
+
+header a {
+  text-decoration: none;
+  color: #918e8e;
+}
+
+header a:hover {
+  color: #AA884C;
+}
+
+nav {
+  display: none;
+}
+
+nav ul {
+  background-color: #383838;
+  color: #918e8e;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding: 10px;
+  border-bottom: 1px solid #918e8e;
+}
+
+nav ul li:hover {
+/*  background-color: #81dbb5;*/
+  background-color: #686F76;
+  cursor: pointer;
+  color: #e0cf4a;
+}
+
+.bg-image {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  opacity: 0.8;
+  z-index: -1;
+  top: 0;
+}
+
+.bg-image img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+
+.addNew {
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #f4f4f4;
+  border-radius: 7px;
+  align-items: center;
+  background-color: #fff;
+}
+
+.addNew:hover .fa-plus {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.status-box {
+  width: 80%;
+  font-size: .7em;
+  text-align: center;
+}
+
+.addNew i {
+  margin-left: auto;
+  color: #e6812a;
+  cursor: pointer; 
+}
+
+.addNew i:hover {
+  color:  #e0cf4a;
+  
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+.modal-content {
+  margin: 0 auto;
+  width: 80%;
+  position: fixed;
+  bottom: 5%;
+  left: 10%;
+}
+
+.modal-content-a {
+  background-color: #fefefe;
+  border-radius: 7px 0 7px 0;
+}
+
+.modal-header {
+  background-color: inherit;
+  color: #444;
+  border-radius: 7px 0 0 0;
+}
+
+.modal-header h5 {
+  text-align: center;
+  margin: 0 auto;
+  color: #aaaaaa;
+}
+
+.modal-content-b {
+  background-color: #fefefe;
+  border-radius: 0 7px 0 7px;
+}
+
+
+.modal-content a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px 0;
+  
+}
+
+.createNew-optns {
+  list-style-type: none;
+}
+
+.createNew-optns a:hover {
+  color: #e6812a;
+  background-color: #f4f4f4;
+}
+
+.create-folder {
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+.create-list:hover {
+  border-radius: 0px 0px 7px 0px;
+}
+
+.cancel-btn {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+  margin: 20px auto 0;
+  background-color: inherit;
+  border: 0px;
+  width: 100%;
+  font-size: 1em;
+  color: #e6472a;
+  border-radius: 0 7px 0 7px;
+}
+
+.cancel-btn:hover {
+  background-color: rgba(255, 99, 71, 0.47);
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Keyframes*/
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Media Queries*/
+
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
+
+  body {
+    background-color: #778D99;
+  }
+
+  header, nav, .content, .bg-image {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+    .modal-content {
+      width: 40%;
+      left: 30%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  /* portrait phones */
+}
